@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GlowRitual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rose:       #993556;
+      --rose-light: #F4C0D1;
+      --rose-pale:  #FBEAF0;
+      --rose-dark:  #4B1528;
+      --teal:       #1D9E75;
+      --teal-light: #E1F5EE;
+      --ink:        #1a1015;
+      --muted:      #7a5f68;
+      --line:       #f0d8e0;
+      --bg:         #fdfaf9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--rose-pale);
+      border-bottom: 1px solid var(--rose-light);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      text-decoration: none;
+    }
+
+    .logo-drop {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--rose-dark);
+    }
+
+    .logo-name span { color: var(--rose); }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      color: var(--rose-dark);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .header-meta {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .header-meta span {
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    .header-meta span::before {
+      content: '·';
+      margin-right: 8px;
+    }
+
+    .header-meta span:first-child::before { content: ''; margin: 0; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 520px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--rose-light);
+      flex-shrink: 0;
+    }
+
+    .toc a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--rose); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-num {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--rose);
+      background: var(--rose-pale);
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 400;
+      color: var(--rose-dark);
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    section p {
+      color: #3d2830;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      padding-left: 0;
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    section li {
+      font-weight: 300;
+      color: #3d2830;
+      padding: 6px 0 6px 22px;
+      position: relative;
+      border-bottom: 1px solid #f5e8ec;
+    }
+
+    section li:last-child { border-bottom: none; }
+
+    section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--rose-light);
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .highlight p {
+      color: #085041 !important;
+      font-size: 14px;
+      margin: 0 !important;
+    }
+
+    .highlight strong { font-weight: 500; }
+
+    /* ── Warning box ── */
+    .warning {
+      background: #FAEEDA;
+      border-left: 3px solid #EF9F27;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .warning p {
+      color: #412402 !important;
+      font-size: 14px;
+      margin: 0 !important;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--rose-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg { width: 20px; height: 20px; }
+
+    .contact-info p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 4px !important;
+    }
+
+    .contact-info a {
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--rose-dark);
+      color: #d4a0b0;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    footer strong { color: var(--rose-light); }
+
+    footer a { color: var(--rose-light); text-decoration: none; }
+
+    /* ── Back to top ── */
+    .back-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 48px;
+      font-size: 13px;
+      color: var(--rose);
+      text-decoration: none;
+      border: 1px solid var(--rose-light);
+      border-radius: 20px;
+      padding: 8px 18px;
+      transition: background 0.2s;
+    }
+
+    .back-top:hover { background: var(--rose-pale); }
+
+    /* ── Divider ornament ── */
+    .ornament {
+      text-align: center;
+      color: var(--rose-light);
+      font-size: 20px;
+      margin: 48px 0;
+      letter-spacing: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="top">
+    <a class="logo-mark" href="#">
+      <svg class="logo-drop" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 3 C18 3 6 16 6 23 C6 30 11.4 35 18 35 C24.6 35 30 30 30 23 C30 16 18 3 18 3Z" fill="#F4C0D1"/>
+        <path d="M18 10 C18 10 9 20 9 23 C9 28.5 13 33 18 33 C23 33 27 28.5 27 23 C27 20 18 10 18 10Z" fill="#ED93B1"/>
+        <path d="M18 17 C18 17 13 22 13 25 C13 28 15.2 31 18 31 C20.8 31 23 28 23 25 C23 22 18 17 18 17Z" fill="#D4537E"/>
+        <path d="M21 19 Q27 21 27 27" stroke="#F4C0D1" stroke-width="1" stroke-linecap="round"/>
+        <path d="M22 28 Q27 21 25 14 Q27 20 24 28Z" fill="#1D9E75"/>
+        <path d="M22 28 L25 14" stroke="#085041" stroke-width="0.8" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-name">Glow<span>Ritual</span></span>
+    </a>
+    <h1>Privacy <em>&amp; Cookie</em><br>Policy</h1>
+    <p class="header-meta">
+      <span>Effective: June 1, 2025</span>
+      <span>Last updated: May 2025</span>
+      <span>Pinterest Compliance</span>
+    </p>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#data-collected">Data we collect</a></li>
+        <li><a href="#how-we-use">How we use your data</a></li>
+        <li><a href="#pinterest">Pinterest &amp; third parties</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#your-rights">Your rights (GDPR)</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section id="who-we-are">
+      <span class="section-num">01</span>
+      <h2>Who we are</h2>
+      <p><strong>GlowRitual</strong> is a skincare and beauty content brand dedicated to sharing routines, product recommendations, and wellness tips. We operate primarily through Pinterest and other social media platforms.</p>
+      <p>This Privacy Policy explains how we handle any personal data that may be collected when you interact with our content, website, or communications. We are committed to protecting your privacy in accordance with applicable regulations, including the EU General Data Protection Regulation (GDPR) and Spain's LOPDGDD.</p>
+      <div class="highlight">
+        <p><strong>Note:</strong> GlowRitual is a content creator account, not a data broker. We do not sell personal data under any circumstances.</p>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="data-collected">
+      <span class="section-num">02</span>
+      <h2>Data we collect</h2>
+      <p>Depending on how you interact with GlowRitual, we may process the following categories of data:</p>
+      <ul>
+        <li><strong>Contact information</strong> — name and email address if you subscribe to our newsletter or contact us directly.</li>
+        <li><strong>Usage data</strong> — pages visited, pins saved, and content engaged with, collected via platform analytics (Pinterest Analytics, Google Analytics).</li>
+        <li><strong>Device &amp; browser data</strong> — IP address, browser type, operating system, and referring URLs, collected automatically via cookies and analytics tools.</li>
+        <li><strong>Voluntary content</strong> — any information you choose to share when commenting or messaging us on social platforms.</li>
+      </ul>
+      <p>We do <strong>not</strong> collect sensitive personal data such as health information, financial data, or government identification numbers.</p>
+    </section>
+
+    <!-- 3 -->
+    <section id="how-we-use">
+      <span class="section-num">03</span>
+      <h2>How we use your data</h2>
+      <p>We use the data described above for the following purposes:</p>
+      <ul>
+        <li>To deliver and improve our skincare content and recommendations.</li>
+        <li>To send newsletters or updates if you have opted in (you can unsubscribe at any time).</li>
+        <li>To understand how our audience engages with our content so we can improve it.</li>
+        <li>To comply with legal obligations under applicable law.</li>
+        <li>To respond to enquiries or complaints sent to us directly.</li>
+      </ul>
+      <p>Our legal bases for processing under GDPR are: <strong>consent</strong> (for newsletters and non-essential cookies), <strong>legitimate interests</strong> (for analytics and content optimisation), and <strong>legal obligation</strong> where required.</p>
+    </section>
+
+    <!-- 4 -->
+    <section id="pinterest">
+      <span class="section-num">04</span>
+      <h2>Pinterest &amp; third-party platforms</h2>
+      <p>GlowRitual publishes content on <strong>Pinterest</strong>. When you interact with our Pinterest profile — including viewing pins, saving content, or clicking through to external links — Pinterest's own data practices apply. We encourage you to review Pinterest's Privacy Policy at <a href="https://policy.pinterest.com/privacy-policy" target="_blank" rel="noopener">policy.pinterest.com</a>.</p>
+      <p>We may also use or link to the following third-party services, each with their own privacy policies:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> — website traffic analysis. Data is anonymised where possible. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><strong>Mailchimp / ConvertKit</strong> — email newsletter delivery if applicable.</li>
+        <li><strong>Amazon Associates / affiliate networks</strong> — we may earn commissions from product links. Clicking these links may set third-party cookies.</li>
+        <li><strong>Instagram / TikTok</strong> — additional social channels; each platform governs its own data.</li>
+      </ul>
+      <div class="warning">
+        <p><strong>Affiliate disclosure:</strong> Some links on our content and website may be affiliate links. We only recommend products we genuinely believe in. Purchasing through these links does not affect your price.</p>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section id="cookies">
+      <span class="section-num">05</span>
+      <h2>Cookies</h2>
+      <p>Our website uses cookies — small text files stored in your browser. Below is a summary of the types we use:</p>
+      <ul>
+        <li><strong>Strictly necessary cookies</strong> — essential for the website to function. No consent required.</li>
+        <li><strong>Analytics cookies</strong> — help us understand how visitors use our site (e.g. Google Analytics). Enabled only with your consent.</li>
+        <li><strong>Marketing / advertising cookies</strong> — used for personalised advertising (e.g. Pinterest Tag). Enabled only with your consent.</li>
+      </ul>
+      <p>You can manage cookie preferences at any time through your browser settings or our cookie consent banner. Disabling cookies may affect certain website functionality.</p>
+      <div class="highlight">
+        <p>Pinterest uses its own cookies and tracking pixel to measure ad performance and personalize content. You can manage Pinterest's ad settings at <a href="https://pinterest.com/settings/privacy" target="_blank" rel="noopener">pinterest.com/settings/privacy</a>.</p>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section id="your-rights">
+      <span class="section-num">06</span>
+      <h2>Your rights (GDPR)</h2>
+      <p>If you are located in the European Economic Area (EEA), you have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to rectification</strong> — you can ask us to correct inaccurate or incomplete data.</li>
+        <li><strong>Right to erasure</strong> — you can ask us to delete your personal data ("right to be forgotten").</li>
+        <li><strong>Right to restrict processing</strong> — you can ask us to limit how we process your data.</li>
+        <li><strong>Right to data portability</strong> — you can receive your data in a structured, machine-readable format.</li>
+        <li><strong>Right to object</strong> — you can object to processing based on legitimate interests or for direct marketing.</li>
+        <li><strong>Right to withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time without affecting prior processing.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at the email address in the Contact section below. We will respond within 30 days. You also have the right to lodge a complaint with the Spanish data protection authority, the <strong>AEPD</strong> (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+    </section>
+
+    <!-- 7 -->
+    <section id="retention">
+      <span class="section-num">07</span>
+      <h2>Data retention</h2>
+      <p>We retain personal data only for as long as necessary to fulfil the purposes described in this policy or as required by law:</p>
+      <ul>
+        <li><strong>Newsletter subscribers</strong> — data retained until you unsubscribe or request deletion.</li>
+        <li><strong>Analytics data</strong> — aggregated data retained for up to 26 months; raw IP-based data anonymised within 14 months (Google Analytics default).</li>
+        <li><strong>Contact enquiries</strong> — email correspondence retained for up to 2 years.</li>
+      </ul>
+    </section>
+
+    <!-- 8 -->
+    <section id="children">
+      <span class="section-num">08</span>
+      <h2>Children's privacy</h2>
+      <p>Our content is directed at adults aged 16 and over. We do not knowingly collect personal data from children under the age of 16. If you believe a child has provided us with personal information, please contact us immediately and we will take steps to delete it.</p>
+      <p>Pinterest requires all users to be at least 13 years old (or older where local law requires). Please refer to Pinterest's Terms of Service for more information.</p>
+    </section>
+
+    <!-- 9 -->
+    <section id="changes">
+      <span class="section-num">09</span>
+      <h2>Policy changes</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will update the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this policy periodically. Continued use of our content or website after changes take effect constitutes your acceptance of the updated policy.</p>
+    </section>
+
+    <!-- 10 -->
+    <section id="contact">
+      <span class="section-num">10</span>
+      <h2>Contact us</h2>
+      <p>If you have any questions about this Privacy Policy, wish to exercise your data rights, or want to report a concern, please reach out:</p>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#993556" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-info">
+          <p>GlowRitual — Skincare &amp; Beauty</p>
+          <p>Barcelona, Spain</p>
+          <p>Pinterest: <a href="https://www.pinterest.com/GlowRitualGlowRitual/" target="_blank" rel="noopener">@GlowRitualGlowRitual</a></p>
+          <p>Email: <a href="mailto:pollyana.pgm2@gmail.com">pollyana.pgm2@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <a class="back-top" href="#top">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      Back to top
+    </a>
+
+  </main>
+
+  <footer>
+    <p><strong>GlowRitual</strong> &nbsp;·&nbsp; Skincare &amp; Beauty Routines</p>
+    <p style="margin-top: 6px;">© 2025 GlowRitual. All rights reserved. &nbsp;·&nbsp; Barcelona, Spain</p>
+    <p style="margin-top: 6px; font-size: 12px; opacity: 0.7;">This page is hosted on GitHub Pages and was last reviewed in May 2025.</p>
+  </footer>
+
+</body>
+</html>
